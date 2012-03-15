@@ -1,5 +1,5 @@
-etherpad-padlist README
-==================
+etherpaddy README
+=================
 
 Getting Started
 ---------------
