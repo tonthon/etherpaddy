@@ -1,0 +1,5 @@
+*.pyc
+.*.swp
+*.egg-info
+mako_compiled_templates
+*.log

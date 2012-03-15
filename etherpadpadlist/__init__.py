@@ -6,7 +6,7 @@
 #   License: http://www.gnu.org/licenses/gpl-3.0.txt
 #
 # * Creation Date : 11-01-2012
-# * Last Modified : jeu. 15 mars 2012 15:36:42 CET
+# * Last Modified : jeu. 15 mars 2012 20:13:07 CET
 #
 # * Project :
 #
@@ -33,6 +33,8 @@ def main(global_config, **settings):
     # and the two following routes,
     # we can get a very clean REST API
     config.add_route("pads", "/pads")
+    config.add_route("padnew", "/pads/new")
+    config.add_route("pad", "/pads/{padid}")
 
     config.scan('etherpadpadlist')
     return config.make_wsgi_app()
