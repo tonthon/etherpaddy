@@ -6,9 +6,9 @@
 #   License: http://www.gnu.org/licenses/gpl-3.0.txt
 #
 # * Creation Date : mer. 11 janv. 2012
-# * Last Modified : ven. 16 mars 2012 00:30:10 CET
+# * Last Modified : ven. 16 mars 2012 00:34:14 CET
 #
-# * Project : etherpad-padlist
+# * Project : etherpaddy
 #
 """
     Main views for etherpad-lite
@@ -16,8 +16,8 @@
 
 from pyramid.view import view_config
 
-from etherpadpadlist.models.model import get_all_pads
-from etherpadpadlist.jsonify import jsonify
+from etherpaddy.models.model import get_all_pads
+from etherpaddy.jsonify import jsonify
 
 @view_config(route_name='index', renderer='index.mako')
 def default_index(request):

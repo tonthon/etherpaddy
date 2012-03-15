@@ -6,14 +6,14 @@
 #   License: http://www.gnu.org/licenses/gpl-3.0.txt
 #
 # * Creation Date : mer. 11 janv. 2012
-# * Last Modified : jeu. 15 mars 2012 19:08:55 CET
+# * Last Modified : ven. 16 mars 2012 00:33:05 CET
 #
-# * Project : etherpad-padlist
+# * Project : etherpaddy
 #
 """
     Model to wrap the existing database
 """
-from etherpadpadlist.models import DBBASE, DBSESSION
+from etherpaddy.models import DBBASE, DBSESSION
 
 class StoreItem(DBBASE):
     """

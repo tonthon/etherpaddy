@@ -6,7 +6,7 @@
 #   License: http://www.gnu.org/licenses/gpl-3.0.txt
 #
 # * Creation Date : 11-01-2012
-# * Last Modified : mer. 11 janv. 2012 16:30:37 CET
+# * Last Modified : ven. 16 mars 2012 00:33:58 CET
 #
 # * Project :
 #
@@ -16,7 +16,7 @@ import sys
 from sqlalchemy import engine_from_config
 from pyramid.paster import get_appsettings, setup_logging
 
-from etherpadpadlist.models import initialize_sql
+from etherpaddy.models import initialize_sql
 
 def usage(argv):
     cmd = os.path.basename(argv[0])
@@ -29,6 +29,6 @@ def main(argv=sys.argv):
         usage(argv)
     config_uri = argv[1]
     setup_logging(config_uri)
-    settings = get_appsettings(config_uri, etherpad-padlist)
+    settings = get_appsettings(config_uri, etherpaddy)
     engine = engine_from_config(settings, 'sqlalchemy.')
     initialize_sql(engine)

@@ -9,12 +9,12 @@
     <meta name="KEYWORDS" CONTENT="">
     <meta NAME="ROBOTS" CONTENT="INDEX,FOLLOW,ALL">
     </%block>
-    <link href="${request.static_url('etherpadpadlist:static/css/default.css')}" rel="stylesheet"  type="text/css" />
-    <link href="${request.static_url('etherpadpadlist:static/css/main.css')}" rel="stylesheet"  type="text/css" />
-    <link href="${request.static_url('etherpadpadlist:static/css/bootstrap.min.css')}" rel="stylesheet"  type="text/css" />
+    <link href="${request.static_url('etherpaddy:static/css/default.css')}" rel="stylesheet"  type="text/css" />
+    <link href="${request.static_url('etherpaddy:static/css/main.css')}" rel="stylesheet"  type="text/css" />
+    <link href="${request.static_url('etherpaddy:static/css/bootstrap.min.css')}" rel="stylesheet"  type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="${request.static_url('etherpadpadlist:static/js/etherpad.js')}"></script>
-    <script src="${request.static_url('etherpadpadlist:static/js/bootstrap.min.js')}"></script>
+    <script src="${request.static_url('etherpaddy:static/js/etherpad.js')}"></script>
+    <script src="${request.static_url('etherpaddy:static/js/bootstrap.min.js')}"></script>
     <%block name="headjs" />
     <%block name="css" />
   </head>

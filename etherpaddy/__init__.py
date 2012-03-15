@@ -6,7 +6,7 @@
 #   License: http://www.gnu.org/licenses/gpl-3.0.txt
 #
 # * Creation Date : 11-01-2012
-# * Last Modified : jeu. 15 mars 2012 20:13:07 CET
+# * Last Modified : ven. 16 mars 2012 00:32:51 CET
 #
 # * Project :
 #
@@ -14,7 +14,7 @@ from pyramid.config import Configurator
 
 from sqlalchemy import engine_from_config
 
-from etherpadpadlist.models import initialize_sql
+from etherpaddy.models import initialize_sql
 
 def main(global_config, **settings):
     """
@@ -24,7 +24,7 @@ def main(global_config, **settings):
     initialize_sql(engine)
 
     config = Configurator(settings=settings)
-    config.add_static_view('static', 'etherpadpadlist:static',
+    config.add_static_view('static', 'etherpaddy:static',
                                             cache_max_age=3600)
     config.add_route('index', '/')
     # REST API
@@ -36,5 +36,5 @@ def main(global_config, **settings):
     config.add_route("padnew", "/pads/new")
     config.add_route("pad", "/pads/{padid}")
 
-    config.scan('etherpadpadlist')
+    config.scan('etherpaddy')
     return config.make_wsgi_app()
