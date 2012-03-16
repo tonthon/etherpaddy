@@ -53,13 +53,18 @@ Configure Etherpaddy
 ~~~~~~~~~~~~~~~~~~~~
 
 The etherpaddy contains a production.ini file that you should customize to fit your sql configuration.
-The sqlalchemy.url should be modified to allow connection on the etherpad-lite database.
-The filelog handler should also be modified to set the logfile path and a logrotate configuration should be added.
+
+Configure
+    sqlalchemy.url should be modified to allow connection on the etherpad-lite database
+    etherpaddy.host is the path your server-side pyramid etherpaddy should use to access your pad
+    etherpaddy.apikey is the api key see `Etherpad-lite API`_
+    etherpaddy.path is the reverseproxied path you use to access etherpad-lite (/etherpad is the sample apache file)
+    filelog handler should also be modified to set the logfile path (a logrotate configuration should be added).
 
 Customising Etherpad-lite
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order to add a simple button allowing to go back to etherpaddy from inside etherpad-lite (when in fullscreen mode), 
+In order to add a simple button allowing to go back to etherpaddy from inside etherpad-lite (when in fullscreen mode),
 you should place etherpaddy/etherpad-lite/static/custom/pad.js in etherpad-lite/static/custom/ (don't forget to set the rights to your etherpad user if needed).
 
 Configure Apache
