@@ -12,13 +12,13 @@
 <script>
 function gotopad(){
     var padname = $('#padname').val();
-    var url = ${request.route_path('pads')} + padname;
+    var url = "${request.route_path('pads')}" + "/" + padname;
     window.location = url;
     return false;
 }
 </script>
 <form onsubmit='gotopad(); return false;'>
-<input id='padname' type='text' name='padname'></input>
+<input id='padname' type='text' name='padname'></input><br />
 <button type='submit' onclick='gotopad()'>Create new pad</button>
 </form>
 </%block>
