@@ -1,7 +1,7 @@
 etherpaddy
 ==========
 
-Etherpaddy is a pyramid application wrapping etherpad-lite to allow simple actions on etherpad-lite's pads.
+Etherpaddy is a `Pyramid`_ application wrapping etherpad-lite to allow simple actions on etherpad-lite's pads.
 Who is it for.
 Etherpaddy has been created to allow a simple use of etherpad-lite inside our team.
 It doesn't use any groups or sessions.
@@ -18,8 +18,8 @@ Etherpaddy provides
 Getting Started
 ---------------
 
-Pyramid is a python web framework.
-Etherpaddy is also using sqlalchemy and twitter_bootstrap for design.
+`Pyramid`_ is a python web framework.
+Etherpaddy is also using sqlalchemy and `Twitter Bootstrap` for design.
 
 Installation
 ------------
@@ -28,14 +28,9 @@ Thoses installation tips are GNU/Linux oriented, but it shouldn't be a problem t
 
 First of all, we suppose you have
     - an etherpad-lite installed and running on your server (or a foreign one).
-      See :
-        `Etherpad-lite https://github.com/Pita/etherpad-lite`_
+      See `Etherpad-lite on github`_
     - python-setup-tools and python-virtualenv (apt-get install or yum install or ...)
     - An apache webserver with mod_wsgi, mod_proxy, mod_proxy_http and auth_pam
-
-
-.. _Pyramid: http://www.pylonsproject.org/
-.. _Twitter Bootstrap: http://twitter.github.com/bootstrap/
 
 Install etherpaddy
 ~~~~~~~~~~~~~~~~~~
@@ -83,3 +78,7 @@ Notes on mysql and virtualenv
 
 mysql-python is sometimes a little tricky to install. Since it's a compiled library, it needs some os-wide dependencies.
 For example, on Debian, you'll need to install python-dev libmysqlclient-dev and build-essential.
+
+.. _Etherpad-lite on github: https://github.com/Pita/etherpad-lite
+.. _Pyramid: http://www.pylonsproject.org/
+.. _Twitter Bootstrap: http://twitter.github.com/bootstrap/
