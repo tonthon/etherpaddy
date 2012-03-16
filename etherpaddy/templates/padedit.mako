@@ -3,7 +3,7 @@
 <div class="subnav subnav-fixed">
 <ul class="nav nav-pills">
 <li>
-<a href='#del' onclick="window.alert('We should delete ${padid}');return false;">Delete this pad</a>
+<a href='#del' onclick="delPad('${padid}');return false;">Delete this pad</a>
 </li>
 <li>
 <a href='/etherpad/p/${padid}'>Go Fullscreen</a>
@@ -12,5 +12,5 @@
 </div>
 </%block>
 <%block name='content'>
-<iframe src='/etherpad/p/${padid}' id='padframe' scrolling='no'></iframe>
+<iframe src="${request.route_path('etherpad')}/p/${padid}" id='padframe' scrolling='no'></iframe>
 </%block>
