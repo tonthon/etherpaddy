@@ -9,7 +9,7 @@ It doesn't use any groups or sessions.
 Functionnalities
 ----------------
 
-Etherpaddy provide
+Etherpaddy provides
     - Pad list window
     - Custom Pad add page
     - Custom Editing page with link to fullscreen mode and deleting mode (to come)
@@ -19,18 +19,17 @@ Getting Started
 ---------------
 
 Pyramid is a python web framework.
-Etherpaddy is also using sqlalchemyi and twitter_bootstrap for design.
+Etherpaddy is also using sqlalchemy and twitter_bootstrap for design.
 
 Installation
 ------------
 
 Thoses installation tips are GNU/Linux oriented, but it shouldn't be a problem to install it on other plateforms.
 
-First of all, we suppose you have :
-
+First of all, we suppose you have
     - an etherpad-lite installed and running on your server (or a foreign one).
       See :
-        .. _Etherpad-lite: https://github.com/Pita/etherpad-lite
+        `.. _Etherpad-lite: https://github.com/Pita/etherpad-lite`
     - python-setup-tools and python-virtualenv (apt-get install or yum install or ...)
     - An apache webserver with mod_wsgi, mod_proxy, mod_proxy_http and auth_pam
 
@@ -40,7 +39,6 @@ First of all, we suppose you have :
 
 Install etherpaddy
 ~~~~~~~~~~~~~~~~~~
-
 
 Create a virtualenv, activate, download from github and install:
 
@@ -58,7 +56,7 @@ Configure Etherpaddy
 
 The etherpaddy contains a production.ini file that you should customize to fit your sql configuration.
 The sqlalchemy.url should be modified to allow connection on the etherpad-lite database.
-The filelog handler should also be modified to set the logfile path.
+The filelog handler should also be modified to set the logfile path and a logrotate configuration should be added.
 
 Customising Etherpad-lite
 ~~~~~~~~~~~~~~~~~~~~~~~~~
