@@ -2,12 +2,15 @@ etherpaddy
 ==========
 
 Etherpaddy is a `Pyramid`_ application wrapping etherpad-lite to allow simple actions on etherpad-lite's pads.
-Who is it for.
+
+Who is it for ?
+---------------
+
 Etherpaddy has been created to allow a simple use of etherpad-lite inside our team.
 It doesn't use any groups or sessions.
 
-Functionnalities
-----------------
+Features
+--------
 
 Etherpaddy provides
     - Pad list window
@@ -26,7 +29,7 @@ Installation
 
 Thoses installation tips are GNU/Linux oriented, but it shouldn't be a problem to install it on other plateforms.
 
-First of all, we suppose you have
+First of all, we suppose you have :
     - An etherpad-lite installed and running on your server (or a foreign one).
       See `Etherpad-lite on github`_
     - python-setup-tools and python-virtualenv (apt-get install or yum install or ...)
@@ -56,8 +59,8 @@ The filelog handler should also be modified to set the logfile path and a logrot
 Customising Etherpad-lite
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order to add a simple button allowing to go back to etherpaddy from inside etherpad-lite (when in fullscreen mode).
-You should place etherpaddy/etherpad-lite/static/custom/pad.js in etherpad-lite/static/custom/ (don't forget to set the rights to your etherpad user if needed).
+In order to add a simple button allowing to go back to etherpaddy from inside etherpad-lite (when in fullscreen mode), 
+you should place etherpaddy/etherpad-lite/static/custom/pad.js in etherpad-lite/static/custom/ (don't forget to set the rights to your etherpad user if needed).
 
 Configure Apache
 ~~~~~~~~~~~~~~~~
@@ -65,7 +68,7 @@ Configure Apache
 Etherpaddy comes with a pyramid.wsgi file and a sample apache configuration.
 The pyramid.wsgi file should be placed in the env directory created here above (with the virtualenv command).
 
-The sample configuration
+The sample configuration :
     - Add pam authentication on /
     - Reverseproxy etherpad-lite (asserting it runs on the same server on the port 9001)
     - Serves our pyramid app on / through wsgi
