@@ -12,9 +12,13 @@
     <link href="${request.static_url('etherpaddy:static/css/default.css')}" rel="stylesheet"  type="text/css" />
     <link href="${request.static_url('etherpaddy:static/css/main.css')}" rel="stylesheet"  type="text/css" />
     <link href="${request.static_url('etherpaddy:static/css/bootstrap.min.css')}" rel="stylesheet"  type="text/css" />
+    <script>
+      var PADURL = "${request.route_path('pads')}";
+      var ETHERPAD_URL = "${request.route_path('etherpad')}";
+      </script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="${request.static_url('etherpaddy:static/js/etherpad.js')}"></script>
     <script src="${request.static_url('etherpaddy:static/js/bootstrap.min.js')}"></script>
+    <script src="${request.static_url('etherpaddy:static/js/etherpaddy.js')}"></script>
     <%block name="headjs" />
     <%block name="css" />
   </head>
