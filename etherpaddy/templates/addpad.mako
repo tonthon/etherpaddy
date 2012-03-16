@@ -14,4 +14,3 @@
 <button type='submit'>Create new pad</button>
 </form>
 </%block>
-
