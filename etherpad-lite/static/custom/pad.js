@@ -35,5 +35,5 @@ function customStart()
    * add a custom button
    */
   var right_menu = $('#menu_right');
-  right_menu.prepend(getCustomMenuItems);
+  right_menu.prepend(getCustomMenuItems());
 }
