@@ -29,7 +29,7 @@ Thoses installation tips are GNU/Linux oriented, but it shouldn't be a problem t
 First of all, we suppose you have
     - an etherpad-lite installed and running on your server (or a foreign one).
       See :
-        `.. _Etherpad-lite: https://github.com/Pita/etherpad-lite`
+        `Etherpad-lite https://github.com/Pita/etherpad-lite`_
     - python-setup-tools and python-virtualenv (apt-get install or yum install or ...)
     - An apache webserver with mod_wsgi, mod_proxy, mod_proxy_http and auth_pam
 
