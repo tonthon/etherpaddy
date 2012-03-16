@@ -27,7 +27,7 @@ Installation
 Thoses installation tips are GNU/Linux oriented, but it shouldn't be a problem to install it on other plateforms.
 
 First of all, we suppose you have
-    - an etherpad-lite installed and running on your server (or a foreign one).
+    - An etherpad-lite installed and running on your server (or a foreign one).
       See `Etherpad-lite on github`_
     - python-setup-tools and python-virtualenv (apt-get install or yum install or ...)
     - An apache webserver with mod_wsgi, mod_proxy, mod_proxy_http and auth_pam
@@ -64,6 +64,7 @@ Configure Apache
 
 Etherpaddy comes with a pyramid.wsgi file and a sample apache configuration.
 The pyramid.wsgi file should be placed in the env directory created here above (with the virtualenv command).
+
 The sample configuration
     - Add pam authentication on /
     - Reverseproxy etherpad-lite (asserting it runs on the same server on the port 9001)
