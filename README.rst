@@ -64,7 +64,7 @@ Configure Apache
 
 Etherpaddy comes with a pyramid.wsgi file and a sample apache configuration.
 The pyramid.wsgi file should be placed in the env directory created here above (with the virtualenv command).
-The sample configuration :
+The sample configuration
     - Add pam authentication on /
     - Reverseproxy etherpad-lite (asserting it runs on the same server on the port 9001)
     - Serves our pyramid app on / through wsgi
