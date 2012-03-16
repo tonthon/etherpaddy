@@ -6,13 +6,14 @@
 #   License: http://www.gnu.org/licenses/gpl-3.0.txt
 #
 # * Creation Date : mer. 11 janv. 2012
-# * Last Modified : ven. 16 mars 2012 18:12:26 CET
+# * Last Modified : ven. 16 mars 2012 19:13:15 CET
 #
 # * Project : etherpaddy
 #
 """
     Main views for etherpad-lite
 """
+import os
 import string
 import random
 from urllib2 import URLError
@@ -79,10 +80,14 @@ def deletepad(request):
     padid = request.matchdict.get('padid')
     settings = get_current_registry().settings
     host = settings['etherpaddy.host']
+    apiurl = os.path.join(host, 'api')
     apikey = settings['etherpaddy.apikey']
     try:
-        api = EtherpadLiteClient(apikey, host)
-        ret_datas = api.deletePad(padid)
+        api = EtherpadLiteClient(apikey, apiurl)
+        datas = api.deletePad(padid)
+        ret_datas = dict(code=0,
+                         message="Your pad has been deleted successfully",
+                         datas=datas)
     except URLError:
         ret_datas = dict(code=1,
                     message="Unable to join etherpad-lite's api, \
