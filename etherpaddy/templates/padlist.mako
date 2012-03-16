@@ -7,7 +7,7 @@
      <td>
      <div class="btn-group">
      <a class="btn" href="${request.route_path('pad', padid=pad.get_name())}">Edit</a>
-     <a class="btn" href="#delpad" onclick="deletePad('${pad.get_name()}');return false;">Delete</a>
+     <a class="btn" href="#delpad" onclick="delPad('${pad.get_name()}');return false;">Delete</a>
      </div>
      </td>
      </tr
