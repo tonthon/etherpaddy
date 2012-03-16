@@ -21,8 +21,9 @@ function getCustomMenuItems(){
   /*
    * Return the custom menu Item
    */
-  return "<li onclick=\"goToPadList();return false;\"> \
-    <a class='buttonicon buttonicon-insertunorderedlist'></a> \
+  return "<li onclick=\"goToPadList();return false;\" \
+  title='Go to the pads list'> \
+  <a class='buttonicon buttonicon-insertunorderedlist'></a> \
     </li>";
 
 }
