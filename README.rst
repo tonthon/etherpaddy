@@ -54,7 +54,14 @@ Configure Etherpaddy
 ~~~~~~~~~~~~~~~~~~~~
 
 The etherpaddy contains a production.ini file that you should customize to fit your sql configuration.
-The sqlalchemy.url should be modified to allow connection on the etherpad-lite database, since the etherpaddy database is utf8_bin, you need to add some specific attributes.
+Configure
+    sqlalchemy.url should be modified to allow connection on the etherpad-lite database
+    etherpaddy.host is the path your server-side pyramid etherpaddy should use to access your pad
+    etherpaddy.apikey is the api key see `Etherpad-lite API`_
+    etherpaddy.path is the reverseproxied path you use to access etherpad-lite (/etherpad is the sample apache file)
+    filelog handler should also be modified to set the logfile path (a logrotate configuration should be added).
+
+Since the etherpaddy database uses utf8_bin, you need to add some specific attributes to your connection string:
 Your configuration should look like ;
 .. code-block::
 
