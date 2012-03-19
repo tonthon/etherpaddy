@@ -6,7 +6,7 @@
 #   License: http://www.gnu.org/licenses/gpl-3.0.txt
 #
 # * Creation Date : mer. 11 janv. 2012
-# * Last Modified : ven. 16 mars 2012 00:33:05 CET
+# * Last Modified : lun. 19 mars 2012 10:57:46 CET
 #
 # * Project : etherpaddy
 #
@@ -29,5 +29,5 @@ def get_all_pads():
     """
         Return all existing pads from the database
     """
-    padregex = "^pad:{1}[a-zA-Z0-9]+$"
+    padregex = "^pad:{1}[a-zA-Z0-9_-]+$"
     return DBSESSION().query(StoreItem).filter(StoreItem.key.op('regexp')(padregex))
