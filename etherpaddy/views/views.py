@@ -6,33 +6,29 @@
 #   License: http://www.gnu.org/licenses/gpl-3.0.txt
 #
 # * Creation Date : mer. 11 janv. 2012
-# * Last Modified : ven. 16 mars 2012 19:13:15 CET
+# * Last Modified : jeu. 22 mars 2012 12:03:31 CET
 #
 # * Project : etherpaddy
 #
 """
     Main views for etherpad-lite
 """
-import os
 import string
 import random
-from urllib2 import URLError
 
-from pyramid.threadlocal import get_current_registry
 from pyramid.view import view_config
 from pyramid.httpexceptions import HTTPFound
 from pyramid.url import route_path
 
-from etherpaddy.external.py_etherpad import EtherpadLiteClient
-
 from etherpaddy.models.model import get_all_pads
 from etherpaddy.jsonify import jsonify
+from etherpaddy.api import delete_pad
 
 def gen_random():
     """
         Returns a random string composed with digits and characters
     """
-    rand = ''.join(random.choice(string.ascii_uppercase + string.digits)
+    rand = ''.join(random.choice(string.ascii_letters + string.digits)
                                                         for x in range(10))
     return "random_" + rand
 
@@ -78,21 +74,7 @@ def deletepad(request):
         Delete a pad
     """
     padid = request.matchdict.get('padid')
-    settings = get_current_registry().settings
-    host = settings['etherpaddy.host']
-    apiurl = os.path.join(host, 'api')
-    apikey = settings['etherpaddy.apikey']
-    try:
-        api = EtherpadLiteClient(apikey, apiurl)
-        datas = api.deletePad(padid)
-        ret_datas = dict(code=0,
-                         message="Your pad has been deleted successfully",
-                         datas=datas)
-    except URLError:
-        ret_datas = dict(code=1,
-                    message="Unable to join etherpad-lite's api, \
-check configuration and network connection")
-    return ret_datas
+    return delete_pad(padid)
 
 @view_config(route_name='genpadname', renderer='json', request_method='GET')
 def genpadname(request):
