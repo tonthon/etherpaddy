@@ -24,6 +24,7 @@ from urllib2 import URLError
 
 from pyramid.threadlocal import get_current_registry
 
+API_VERSION = 1
 TIMEOUT = 15
 
 def get_api_infos():
@@ -33,7 +34,7 @@ def get_api_infos():
     settings = get_current_registry().settings
     host = settings['etherpaddy.host']
     apikey = settings['etherpaddy.apikey']
-    apiurl = os.path.join(host, 'api')
+    apiurl = os.path.join(host, 'api', API_VERSION)
     return apiurl, apikey
 
 def build_post_args(padid, apikey):
@@ -50,9 +51,10 @@ def delete_pad(padid):
     """
     try:
         apiurl, apikey = get_api_infos()
+        delurl = os.path.join(apiurl, 'deletePad')
         data = build_post_args(padid, apikey)
         opener = urllib2.build_opener()
-        request = urllib2.Request(url=apiurl, data=data)
+        request = urllib2.Request(url=delurl, data=data)
         response = opener.open(request, timeout=TIMEOUT)
         result = response.read()
     except KeyError:
