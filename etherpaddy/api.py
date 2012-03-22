@@ -24,7 +24,7 @@ from urllib2 import URLError
 
 from pyramid.threadlocal import get_current_registry
 
-API_VERSION = 1
+API_VERSION = "1"
 TIMEOUT = 15
 
 def get_api_infos():
