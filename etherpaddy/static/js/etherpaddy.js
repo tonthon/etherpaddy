@@ -26,18 +26,20 @@ function delPad(padId){
   /*
    * Call the delpad method
    */
-  var delurl = getPadUrl(padId);
-  jQuery.ajax({url:delurl, type:'DELETE',
-    success:function(data){
-      if (data['code'] === 0){
-        alert("The pad " + padId + " has been deleted");
-        window.location.href = PADURL;
-      }else{
-        alert(data['message']);
-      }
-    },
-    error:function(e){
-      alert(e);
-    }
-  });
+  if (window.confirm("Are you sure you want to delete this pad ?")){
+    var delurl = getPadUrl(padId);
+    jQuery.ajax({url:delurl, type:'DELETE',
+                 success:function(data){
+                  if (data['code'] === 0){
+                    alert("The pad " + padId + " has been deleted");
+                    window.location.href = PADURL;
+                  }else{
+                    alert(data['message']);
+                  }
+                },
+                error:function(e){
+                  alert(e);
+                }
+              });
+  }
 }
