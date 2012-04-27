@@ -1,8 +1,8 @@
 <%inherit file="base.mako"></%inherit>
 <%block name='content'>
-<table class="table table-striped">
+<table class="table table-striped table-condensed">
 % for i, pad in enumerate(pads):
-    <tr><td>i</td>
+    <tr>
      <td>${pad.get_name()}</td>
      <td>
      <div class="btn-group">
