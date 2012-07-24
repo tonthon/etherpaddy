@@ -20,3 +20,9 @@ html,body
   width:98%;
   border:1px solid #ddd;
 }
+.rowlink{
+  cursor:pointer;
+}
+.rowlink:hover{
+  background-color:#d9d9d9;
+}
